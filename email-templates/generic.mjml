@@ -1,0 +1,35 @@
+<mjml>
+  <mj-head>
+    <mj-title>{{subject}}</mj-title>
+    {{{headerTemplate}}}
+  </mj-head>
+
+  <mj-body background-color="#fff">
+    <mj-wrapper padding="0px">
+      <mj-section>
+        <mj-column width="414px" background-color="{{hero.background}}" padding="20px 10px 40px">
+          <mj-text>
+            <img src="{{{storageBucketUrl}}}/logo.png" style="display: block; margin: 0px 0px 40px;" />
+            <h1 style="color: {{hero.foreground}};font-family: Circular, 'Helvetica Neue', sans-serif; font-size: 54px; line-height: 49px;">{{{hero.title}}}</h1>
+            <p style="color: {{hero.foreground}};font-family: Circular, 'Helvetica Neue', sans-serif; font-size: 24px; line-height: 32px;">{{{hero.support}}}</p>
+            {{#hero.support2}}
+              <p style="color: {{hero.foreground}};font-family: Circular, 'Helvetica Neue', sans-serif; font-size: 24px; line-height: 32px; padding-top: 20px;">{{hero.support2}}</p>
+            {{/hero.support2}}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column width="414px" background-color="{{body.background}}" padding="50px 0 50px">
+          <mj-text mj-class="body-text">
+            <p style="color: {{body.foreground}};font-family: Circular, 'Helvetica Neue', sans-serif; font-size: 24px; line-height: 32px; margin: 0px 0px 50px;">{{{body.support}}}</p>
+            <a href="{{{actionButtonUrl}}}" style="font-weight: bold; text-transform: uppercase; display: inline-block; width: 193px; text-align: center; padding: 11px 32px; border-radius: 100px; text-decoration: none; color: {{body.buttonColor}}; background-color: {{body.buttonBackground}};">{{body.button}}</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-raw>&lt;!--[if !mso]&gt;&lt;\!--&gt;</mj-raw>
+    </mj-wrapper>
+
+    {{{footerTemplate}}}
+  </mj-body>
+</mjml>

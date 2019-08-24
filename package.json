@@ -1,0 +1,35 @@
+{
+  "name": "sendgrid-email-relay",
+  "version": "1.0.0",
+  "description": "node express app that exposes API to generate and send templated emails as part of distributed app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "source ./environment-local.sh && node ./index.js",
+    "deploy": "gcloud functions deploy sendgridEmailRelay --env-vars-file app.yml --runtime nodejs8 --trigger-http --entry-point app "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-trump/sendgrid-email-relay.git"
+  },
+  "author": "Matthew Trump <matthew.trump@gmail.com> (http://www.decumanus.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew-trump/sendgrid-email-relay/issues"
+  },
+  "homepage": "https://github.com/matthew-trump/sendgrid-email-relay#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "knex": "^0.18.0",
+    "mjml": "^4.4.0-beta.2",
+    "mustache": "^3.0.2",
+    "urlencode": "^1.1.0"
+  },
+  "devDependencies": {
+    "mjml-utils": "^2.2.1",
+    "nodemon": "^1.19.1"
+  }
+}

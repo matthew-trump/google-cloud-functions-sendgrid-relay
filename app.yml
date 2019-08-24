@@ -1,0 +1,6 @@
+# ALLOW_DISPLAY_IN_BROWSER (disactivated--only for development)
+# TEST_EMAIL_RECIPIENT (disactivated--only for development)
+# SECRET_KEY: ---your-secret-key-here-- (enable this to require valid authorization header for POST commands)
+SENDGRID_API_KEY: ---your-sendgrid-api-key-here---
+EMAIL_DOMAIN: https://example.com
+EMAIL_FROM_ADDRESS: from-address@example.com
